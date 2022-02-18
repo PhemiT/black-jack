@@ -41,6 +41,7 @@ function renderGame() {
     }
     getSum.textContent = "Sum: " + sum
     if (sum < 21) {
+        hasBlackJack = false
         gameMessage = "Do you want to draw a new card?!"
     } else if (sum === 21) {
         hasBlackJack = true
