@@ -1,14 +1,14 @@
 // declaring variables 
-var firstCard = 7
-var secondCard = 10
-var cards = [firstCard, secondCard]
-var sum = firstCard + secondCard
-var hasBlackJack = false
-var isAlive = true
-var gameMessage = ""
-var getMessage = document.getElementById("get-message")
-var getSum = document.getElementById("get-sum")
-var getCards = document.getElementById("get-cards")
+let firstCard = 7
+let secondCard = 10
+let cards = [firstCard, secondCard]
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let gameMessage = ""
+let getMessage = document.getElementById("get-message")
+let getSum = document.getElementById("get-sum")
+let getCards = document.getElementById("get-cards")
 
 function startGame() {
     renderGame()
@@ -31,5 +31,7 @@ function renderGame() {
 function newCard() {
     anotherCard = 5
     sum += anotherCard
+    cards.push(anotherCard)
     renderGame()
 }
+
