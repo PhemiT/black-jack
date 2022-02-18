@@ -1,6 +1,6 @@
 // declaring variables 
-let firstCard = 7
-let secondCard = 10
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -15,7 +15,11 @@ function startGame() {
 }
 
 function renderGame() {
-    getCards.textContent = "Cards: " + cards[0] + " " + cards[1]
+    getCards.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        getCards.textContent += cards[i] + " ";
+        
+    }
     getSum.textContent = "Sum: " + sum
     if (sum <= 21) {
         gameMessage = "Do you want to draw a new card?!"
@@ -29,9 +33,8 @@ function renderGame() {
 }
 
 function newCard() {
-    anotherCard = 5
+    anotherCard = getRandomCard()
     sum += anotherCard
     cards.push(anotherCard)
     renderGame()
 }
-
