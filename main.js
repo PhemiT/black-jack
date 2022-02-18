@@ -1,4 +1,4 @@
-// declaring variables 
+// declaring variables and objects 
 let player = {
     name : "Phemi",
     chips : "500"
@@ -13,7 +13,7 @@ let getSum = document.getElementById("get-sum")
 let getCards = document.getElementById("get-cards")
 let playerInfo = document.getElementById("player-info")
 
-playerInfo.textContent = player.name + ":" + " $" + player.chips
+playerInfo.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
     let randomCard = Math.floor(Math.random()*13) + 1
@@ -40,12 +40,12 @@ function renderGame() {
         getCards.textContent += cards[i] + " ";
     }
     getSum.textContent = "Sum: " + sum
-    if (sum <= 21) {
+    if (sum < 21) {
         gameMessage = "Do you want to draw a new card?!"
     } else if (sum === 21) {
         hasBlackJack = true
         gameMessage = "You've got Blackjack!"
-    } else {
+    } else if (sum > 21) {
         gameMessage = "You're out of the game!"
         isAlive = false
     }    
