@@ -1,4 +1,8 @@
 // declaring variables 
+let player = {
+    name : "Phemi",
+    chips : "500"
+}
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -7,12 +11,8 @@ let gameMessage = ""
 let getMessage = document.getElementById("get-message")
 let getSum = document.getElementById("get-sum")
 let getCards = document.getElementById("get-cards")
-
-let player = {
-    name : "Phemi",
-    chips : "500"
-}
 let playerInfo = document.getElementById("player-info")
+
 playerInfo.textContent = player.name + ":" + " $" + player.chips
 
 function getRandomCard() {
